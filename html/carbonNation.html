@@ -3,62 +3,66 @@
   <head>
     <meta charset="utf-8">
     <title>Carbon Nation</title>
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="../css/master.css" media="screen" title="style" charset="utf-8">
     <link rel="stylesheet" href="../css/header.css" media="screen" title="style" charset="utf-8">
+    <link rel="stylesheet" href="../css/about.css" media="screen" title="style" charset="utf-8">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
     <style media="screen">
-      html {
-        font-family: "Francois One";
-      }
+        h1 {
+          margin-top: 10px;
+          font-size: 50px;
+          color: white;
+          text-align: center;
+        }
+        #play {
+          width: 512px;
+          margin: 0 auto;
+        }
+        #play canvas {
+          padding: 0;
+          border: 2px solid black;
+        }
+        #score-box {
+          font-size: 32px;
+          margin-left: 8px;
+          color: white;
+          background-color: #333;
+          display: inline-block;
+          width: 240px;
+          border: 2px solid black;
+          border-radius: 5px;
+        }
+        #time-box {
+          font-size: 32px;
+          margin-left: 8px;
+          color: white;
+          background-color: #333;
+          display: inline-block;
+          width: 240px;
+          border: 2px solid black;
+          border-radius: 5px;
+        }
+        #score {
+          margin: 0 auto 0 5px;
+          padding: 0;
+        }
+        #time {
+          margin: 0 auto 0 5px;
+          padding: 0;
+        }
+        #play button {
+          display: block;
+          margin: 10px auto;
+        }
 
-      h1 {
-        margin-top: 10px;
-        font-size: 50px;
-        color: white;
-        text-align: center;
-      }
-      #play {
-        width: 512px;
-        margin: 0 auto;
-      }
-      #play canvas {
-        padding: 0;
-        border: 2px solid black;
-      }
-      #score-box {
-        font-size: 32px;
-        margin-left: 8px;
-        color: white;
-        background-color: #333;
-        display: inline-block;
-        width: 240px;
-        border: 2px solid black;
-        border-radius: 5px;
-      }
-      #time-box {
-        font-size: 32px;
-        margin-left: 8px;
-        color: white;
-        background-color: #333;
-        display: inline-block;
-        width: 240px;
-        border: 2px solid black;
-        border-radius: 5px;
-      }
-      #score {
-        margin: 0 auto 0 5px;
-        padding: 0;
-      }
-      #time {
-        margin: 0 auto 0 5px;
-        padding: 0;
-      }
-      #play button {
-        display: block;
-        margin: 10px auto;
-      }
+        #play a {
+          display: block;
+          text-align: center;
+          color: #77E2E2;
+          font-size: 2em;
+        }
 
-    </style>
+      </style>
     <script id="vertex-shader" type="x-shader/x-vertex">
       attribute vec4 myPosition;
       uniform mat3 M;
@@ -110,6 +114,7 @@
         <h3 id="time">Time: 0</h3>
       </div>
       <button  onclick="startNew()">Start New Game</button>
+      <a href="carbonNationStory.html">Discover!</a>
     </div>
   </body>
 </html>
