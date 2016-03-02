@@ -1,0 +1,14 @@
+#about {
+  padding-left: 50px;
+}
+
+#about h2 {
+  color: #77E2E2;
+  font-size: 36px;
+}
+
+#about p {
+  padding-left: 75px;
+  font-size: 1.5em;
+  line-height: 1.5;
+}

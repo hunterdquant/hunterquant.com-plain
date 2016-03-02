@@ -1,0 +1,93 @@
+#splash {
+  height: 250px;
+}
+
+#splash p {
+  font-size: 50px;
+  text-align: center;
+  color: #77E2E2;
+  padding-top: 80px;
+}
+
+#about {
+  padding-left: 50px;
+}
+
+#about h2 {
+  color: #77E2E2;
+  font-size: 36px;
+}
+
+#about p {
+  padding-left: 75px;
+  font-size: 1.5em;
+  line-height: 1.5;
+}
+
+#projects {
+  padding-left: 50px;
+}
+
+#projects h2 {
+  color: #77E2E2;
+  font-size: 36px;
+}
+
+#projects ul {
+  margin-top: 10px;
+  margin-left: 75px;
+  list-style-type: none;
+}
+
+#projects ul li {
+  margin: 5px 0;
+  color: white;
+  font-size: 1.5em;
+}
+
+#projects ul li b {
+  color: black;
+}
+
+#projects ul span {
+  color: #77E2E2;
+}
+
+#projects p {
+  color: white;
+  margin-top: 10px;
+}
+
+#contact {
+  padding-left: 50px;
+}
+
+#contact h2 {
+  color: #77E2E2;
+  font-size: 36px;
+}
+
+#contact ul {
+  margin-top: 10px;
+  margin-left: 75px;
+  list-style-type: none;
+}
+
+#contact ul li {
+
+  margin: 5px 0;
+  font-size: 1.5em;
+}
+
+#contact ul li a {
+  text-decoration: none;
+  color: #77E2E2;
+}
+
+#contact ul li a:hover {
+  color: black;
+}
+
+#co1ntact p {
+  margin-top: 10px;
+}

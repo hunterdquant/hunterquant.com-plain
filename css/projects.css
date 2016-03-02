@@ -1,0 +1,75 @@
+#projects {
+  padding-left: 50px;
+}
+
+#projects h2 {
+  color: #77E2E2;
+  font-size: 36px;
+}
+
+#projects ul {
+  margin-top: 10px;
+  margin-left: 75px;
+  list-style-type: none;
+}
+
+#projects ul li {
+  margin: 5px 0;
+  color: white;
+  font-size: 1.5em;
+}
+
+#projects ul li b {
+  color: black;
+}
+
+#projects ul span {
+  color: #77E2E2;
+}
+
+#projects p {
+  color: white;
+  margin-top: 10px;
+}
+
+#links {
+  padding-left: 50px;
+}
+
+#links h2 {
+  color: #77E2E2;
+  font-size: 36px;
+}
+
+#links ul {
+  margin-left: 75px;
+  list-style-type: none;
+}
+
+#links ul li {
+  color: white;
+  font-size: 1.5em;
+}
+
+#links ul li b {
+  color: black;
+}
+
+#links ul span {
+  color: #77E2E2;
+}
+
+#links p {
+  color: white;
+  margin-top: 10px;
+}
+
+#links a {
+  font-size: 24px;
+  text-decoration: none;
+  color: #77E2E2;
+}
+
+#links a:hover {
+  color: black;
+}
