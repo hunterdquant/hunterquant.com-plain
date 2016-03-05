@@ -1,13 +1,21 @@
 /*
   Name: Hunter Quant
   Course: CS452
-  Lab: 2
+  Project: 1
 */
 
 /*
   "Voice Over Under" Kevin MacLeod (incompetech.com)
   Licensed under Creative Commons: By Attribution 3.0 License
   http://creativecommons.org/licenses/by/3.0/
+
+  "Punch HD" Mark DiAngelo
+  Licensed under Creative Commons: By Attribution 3.0 License
+  http://creativecommons.org/licenses/by/3.0/
+
+  "Beep 2" timtube
+  Licensed under Creative Commons: By Sampling Plus 1.0 License
+  https://creativecommons.org/licenses/sampling+/1.0/
 */
 
 /* Define globals */
@@ -117,7 +125,7 @@ function gameLoop() {
     // Draw the character
     drawFlatz();
 
-    // Handle collision and draw each bubble
+    // Handle collision, draw, and update each bubble
     for (var i = bubbles.length - 1; i >= 0; i--) {
       handleBubbleCollision(bubbles[i]);
       drawBubble(bubbles[i]);
@@ -130,19 +138,19 @@ function gameLoop() {
       drawBubbleBomb();
       updateBubbleBomb();
     }
-
+    // Handle collision, draw, and update each danger block
     for (var i = dangerBlocks.length - 1; i >= 0; i--) {
       handleDangerBlockCollision(dangerBlocks[i]);
-      if (playing) {
-        drawDangerBlock(dangerBlocks[i], i);
-        updateDangerBlock(dangerBlocks[i], i);
-      }
+      drawDangerBlock(dangerBlocks[i], i);
+      updateDangerBlock(dangerBlocks[i], i);
     }
+    // Gameover happened this frame them reset the globals.
     if (gameOver) {
       resetGlobals();
       song.pause();
     }
   }
+  // If it's game over draw a red X
   if (gameOver) {
     drawX();
   }
@@ -184,12 +192,18 @@ function handleBubbleCollision(bubble) {
     updateScore(bubble);
     // Flad the bubble as popped
     bubble.popped = true;
+    var pop = new Audio("../audio/Punch_HD-Mark_DiAngelo-1718986183.mp3");
+    pop.volume = 10*bubble.getArea();
+    pop.play();
   }
   // Check if the bubble is in the blast radius of the bomb if one is exploding
   if (bubbleBomb !== null && bubbleBomb.exploding && !bubble.popped) {
     if (Math.pow(bubble.x - bubbleBomb.x, 2) + Math.pow(bubble.y - bubbleBomb.y, 2) <= Math.pow(bubbleBomb.scale*bubbleBomb.radius, 2)) {
       updateScore(bubble);
       bubble.popped = true;
+      var pop = new Audio("../audio/Punch_HD-Mark_DiAngelo-1718986183.mp3");
+      pop.volume = 10*bubble.getArea();
+      pop.play();
     }
   }
 }
@@ -200,6 +214,7 @@ function handleBubbleBombCollision() {
   if (!bubbleBomb.exploding && Math.abs(bubbleBomb.x - flatz.x) <= bubbleBomb.scale*bubbleBomb.radius + 0.05 && Math.abs(bubbleBomb.y - flatz.y) <= bubbleBomb.scale*bubbleBomb.radius + 0.016) {
     // Mark the bomb as exploding
     bubbleBomb.exploding = true;
+    new Audio("../audio/Beep 2-SoundBible.com-1798581971.mp3").play();
   }
 }
 
